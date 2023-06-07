@@ -1,2 +1,2 @@
 #!/bin/bash
-echo -e "B0\x04\x00\x00SCHOOL" > school.mgc
+(file -C -m <(echo '# Magic file for School data files'; echo '0   string  SCHOOL  School data file')) > /dev/null 2>&1
