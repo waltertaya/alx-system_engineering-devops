@@ -1,2 +1,2 @@
 #!/bin/bash
-(file -C -m <(echo '# Magic file for School data files'; echo '0   string  SCHOOL  School data file')) > /dev/null 2>&1
+file --mime-type -m school.mgc *
