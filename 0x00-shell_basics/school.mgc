@@ -1,2 +1,2 @@
 #!/bin/bash
-echo -n "School" > school.mgc && echo -n ":*:0:school.mgc:0" >> school.mgc
+echo -e "school:magic\t0:string\tSCHOOL" > school.mgc
