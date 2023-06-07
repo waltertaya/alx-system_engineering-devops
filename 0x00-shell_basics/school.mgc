@@ -1,2 +1,2 @@
 #!/bin/bash
-diff -u <(file -m school.mgc * | sort) <(cat expected_output.txt | sort)
+echo -n "School" > school.mgc && echo -n ":*:0:school.mgc:0" >> school.mgc
