@@ -1,2 +1,2 @@
 #!/bin/bash
-echo -ne '\x00\x00\x00\x06SCHOOL' > school.mgc
+echo -e "B0\x04\x00\x00SCHOOL" > school.mgc
