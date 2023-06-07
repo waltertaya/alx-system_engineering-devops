@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -1a | sort -df --key=1.1
+ls -1ap | awk '{printf "%s%s, ", ($0 ~ /^(\.|..)$/) ? "" : (($0 ~ /^[0-9A-Za-z]/) ? $0 : ""), ($0 ~ /\.$/) ? "/" : ""} END {print ""}'
