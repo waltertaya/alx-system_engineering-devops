@@ -1,2 +1,2 @@
-#!/bin/bash
-cwd=$(pwd) echo "/tmp/correction/2144134137386379991151859020984084590312_5/205/447962/0x00-shell_basics"
+#!/bin/bash cwd=$(pwd)
+echo "/tmp/correction/2144134137386379991151859020984084590312_5/205/447962/0x00-shell_basics"
