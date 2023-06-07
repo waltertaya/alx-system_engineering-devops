@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "0 string SCHOOL School data file" > school.magic && file -m school.magic *
+echo -e '0 string SCHOOL\n>0 string' > school.mgc && chmod u+x school.mgc
