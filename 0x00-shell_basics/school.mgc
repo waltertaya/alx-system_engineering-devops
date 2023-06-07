@@ -1,2 +1,2 @@
 #!/bin/bash
-echo -e '0 string SCHOOL\n>0 string' > school.mgc && chmod u+x school.mgc
+file -m school.mgc * | diff -u - expected_output.txt
