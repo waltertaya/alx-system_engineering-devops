@@ -1,0 +1,2 @@
+#!/bin/bash
+find . -not -path '*/.*' -type d -empty -printf '%P\n' ; find . -not -path '*/.*' -type f -empty -printf '%P\n'
