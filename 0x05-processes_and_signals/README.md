@@ -9,7 +9,7 @@
 - The file pid_max specifies the value at which PIDs wrap around. It has a default of 32,768.
 
 1. `ps` or `pstree` - Command show PIDs for the processes currently on the system.
-2. `top` command also shows PIDs of currently processes along with other informationabout them
+2. `top` command also shows PIDs of currently processes along with other information about them
 3. `pidof` command provides the PID of a program whose name is passed to it as an argument.
 4. `kill` To terminate frozen or otherwise misbehaving program using PID.
 5. Information on current processes is stored in the `/proc` file system. This filesystem consists of kernel data that changes in real time `ls /proc | less` for listing the contents of the `/proc`
