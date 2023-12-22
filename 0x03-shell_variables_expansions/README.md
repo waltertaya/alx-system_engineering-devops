@@ -52,3 +52,32 @@
 4. \a
 5. \f
 
+## Alias Command
+
+- Lets you create shortcuts for long commands, making them easier to remember and use.
+- It will the same functionality as if the whole command is run.
+
+### How to create your own linux commands
+
+- Using the `alias` command, you'll able to create your own commands. It's so simple to create your own commands.
+- Here's the syntax for the `alias` command:
+
+	`alias [alias-name[=string]...]`
+
+- Example:
+	Assume that you want to create a command called `cdv`, and entering the command in the terminal should take you to the videos directory
+
+	`alias cdv="cd Videos"`
+
+### How to View Created Alias Commands
+
+`alias -p`
+
+### How to Remove an Alias Command in Linux
+- Syntax
+	`unalias alias-name`
+
+### How to Remove All Alias Commands in Linux
+	`unalias -a`
+
+	More on aliases visit https://www.freecodecamp.org/news/how-to-create-your-own-command-in-linux/
