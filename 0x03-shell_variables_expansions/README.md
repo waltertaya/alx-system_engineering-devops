@@ -80,4 +80,4 @@
 ### How to Remove All Alias Commands in Linux
 	`unalias -a`
 
-	More on aliases visit https://www.freecodecamp.org/news/how-to-create-your-own-command-in-linux/
+	More on aliases visit https://www.freecodecamp.org/news/how-to-create-your-own-command-in-linux/w1

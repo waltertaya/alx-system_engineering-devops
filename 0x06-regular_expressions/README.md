@@ -1,1 +1,4 @@
-# 0x06-regular_expressions
+# 0x06-regular_expressions in Ruby
+
+str
+
