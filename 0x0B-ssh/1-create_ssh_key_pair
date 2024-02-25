@@ -4,4 +4,4 @@
 private_key=~/.ssh/school
 passphrase="betty"
 
-ssh-keygen -t rsa -b 4096 -f "$private_key" -N "$passphrase"
+ssh-keygen -b 4096 -f "$private_key" -N "$passphrase"
