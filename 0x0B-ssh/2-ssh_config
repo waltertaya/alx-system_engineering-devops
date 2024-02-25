@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# This script will configure the ssh client to use the private key
+
+Host 447962-web-01
+    HostName 34.202.234.181
+    User ubuntu
+    IdentityFile ~/.ssh/school
+    PasswordAuthentication no
