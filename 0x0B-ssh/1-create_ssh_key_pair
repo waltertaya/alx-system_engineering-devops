@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Bash script that creates an RSA key pair
 
-private_key=~/.ssh/school
+private_key="school"
 passphrase="betty"
 
 ssh-keygen -b 4096 -f "$private_key" -N "$passphrase"
