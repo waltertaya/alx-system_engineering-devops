@@ -5,4 +5,4 @@ if [ "$#" -lt 3 ]; then
 fi
 
 # echo "Transfering $1 to $2 with username $3 and SSH key $4"
-scp -o StrictHostKeyChecking=no -i $4 $1 $3@$2:~/
+scp -o StrictHostKeyChecking=no -i "$4" "$1" "$3"@"$2":~/
