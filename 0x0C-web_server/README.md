@@ -166,3 +166,9 @@ Following these steps will set up Nginx server blocks for hosting multiple domai
 * View log files at the shell prompt using commands like `tail`, `more`, `less`, and `grep`. Example: `tail -f /var/log/apport.log`.
 
 * View log files using GUI tools like the GNOME System Log Viewer, which provides a graphical interface for easier log management, including log monitoring, statistics display, and a calendar to track trends and problems.
+
+## Use of `scp`
+
+```bash
+scp -i PATH_TO_SSH_KEY PATH_TO_FILE USERNAME@IP:~/
+```
