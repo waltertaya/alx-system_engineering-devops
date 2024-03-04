@@ -2,6 +2,7 @@
 
 ## 0x0F. Load balancer
 
+![qfdked8](https://github.com/waltertaya/alx-system_engineering-devops/assets/126944679/ac49527a-1ad3-4de6-ab3f-9ea584d6f367)
 
 
 ---
