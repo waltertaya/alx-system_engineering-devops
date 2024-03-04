@@ -4,7 +4,6 @@
 
 ![qfdked8](https://github.com/waltertaya/alx-system_engineering-devops/assets/126944679/ac49527a-1ad3-4de6-ab3f-9ea584d6f367)
 
-
 ---
 
 ### Project Overview
@@ -66,8 +65,17 @@ In this project, the goal is to enhance the web stack by introducing redundancy 
 
 ---
 
+### Resources
+
+- [How does Software and Hardware Load Balancer Work? (Load balancer Algorithms Explained examples)](https://www.thegeekstuff.com/2016/01/load-balancer-intro/)
+- [Intro to Load Balancing for Developers – The Algorithms](https://community.f5.com/kb/technicalarticles/intro-to-load-balancing-for-developers-%E2%80%93-the-algorithms/273759)
+
+---
+
 ### Author
 
 - **@waltertaya**
+
+---
 
 **Copyright © 2024 ALX, All rights reserved.**
