@@ -1,37 +1,28 @@
 #!/usr/bin/env bash
-# Configures a new ubuntu machine by installing
-# Nginx where it should be listening on port 80
-# Serve a page that would return a Hello World string
-#
-# colors
-blue='\e[1;34m'
-brown='\e[0;33m'
-green='\e[1;32m'
-reset='\033[0m'
+# Configures a new Ubuntu machine by installing Nginx and serving a "Hello World" page on port 80.
 
-echo -e "${blue}Updating and installing ${brown}Nginx${blue}.${reset}\n"
-sudo apt-get update -y -qq && \
-	 sudo apt-get install nginx -y
+# Update package list and install Nginx
+sudo apt-get update -y -qq
+sudo apt-get install nginx -y
 
-echo -e "\n${blue}Setting up some minor stuff.${reset}\n"
+# Start Nginx service
+sudo systemctl start nginx
 
-# starting nginx service
-sudo service nginx start
-
-# allowing nginx on firewall
+# Allow Nginx through the firewall
 sudo ufw allow 'Nginx HTTP'
 
-# Give the user ownership to website files for easy editing
+# Set ownership and permissions for the web directory
 sudo chown -R "$USER":"$USER" /var/www/html
-sudo chmod -R 755 /var/www
+sudo chmod -R 755 /var/www/html
 
-# Backup default index
-cp /var/www/html/index.nginx-debian.html /var/www/html/index.nginx-debian.html.bckp
+# Create a backup of the default index file
+sudo mv /var/www/html/index.nginx-debian.html /var/www/html/index.nginx-debian.html.bak
 
-# Creating new index
-echo -e "Hello World!" | dd status=none of=/var/www/html/index.nginx-debian.html
+# Create a new index file with "Hello World!"
+echo "Hello World!" | sudo tee /var/www/html/index.nginx-debian.html > /dev/null
 
-# Restarting nginx
-sudo service nginx restart
+# Restart Nginx to apply changes
+sudo systemctl restart nginx
 
-echo -e "\n${green}Completed.${reset} ✅\n"
+echo "Nginx installation and configuration completed."
+
