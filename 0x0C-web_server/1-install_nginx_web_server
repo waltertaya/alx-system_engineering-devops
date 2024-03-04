@@ -1,28 +1,11 @@
 #!/usr/bin/env bash
-# Configures a new Ubuntu machine by installing Nginx and serving a "Hello World" page on port 80.
+# Install nginx on your web-01 server
+# Nginx should be listening on port 80
+# When querying Nginx at its root / with a GET request (requesting a page) 
+# using curl, it must return a page that contains the string Holberton School
 
-# Update package list and install Nginx
-sudo apt-get update -y -qq
-sudo apt-get install nginx -y
-
-# Start Nginx service
-sudo systemctl start nginx
-
-# Allow Nginx through the firewall
-sudo ufw allow 'Nginx HTTP'
-
-# Set ownership and permissions for the web directory
-sudo chown -R "$USER":"$USER" /var/www/html
-sudo chmod -R 755 /var/www/html
-
-# Create a backup of the default index file
-sudo mv /var/www/html/index.nginx-debian.html /var/www/html/index.nginx-debian.html.bak
-
-# Create a new index file with "Hello World!"
-echo "Hello World!" | sudo tee /var/www/html/index.nginx-debian.html > /dev/null
-
-# Restart Nginx to apply changes
-sudo systemctl restart nginx
-
-echo "Nginx installation and configuration completed."
-
+apt-get -y update
+apt-get -y install nginx
+ufw allow 'Nginx HTTP'
+echo 'Hello World!' > /var/www/html/index.html
+service nginx start
