@@ -1,0 +1,23 @@
+global
+        log /dev/log    local0
+	stats socket /run/haproxy/admin.sock mode 660 level admin
+
+defaults
+        log     global
+        mode    http
+        option  httplog
+	timeout connect  10s
+	timeout client  30s
+	timeout server  30s
+
+frontend th3gr00t-tech-frontend
+	bind *:80
+	bind *:443 ssl crt /etc/haproxy/certs/waltertayarg.tech.pem
+	http-request redirect scheme https unless { ssl_fc }
+	http-request set-header X-Forwarded-Proto https
+	default_backend waltertayarg-tech-backend
+
+backend th3gr00t-tech-backend
+	balance roundrobin
+	server 447962-web-01 34.202.234.181:80 check
+	server 447962-web-02 54.173.84.105:80 check
