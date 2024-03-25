@@ -1,9 +1,5 @@
 #!/usr/bin/python3
-"""
-Scrript using REST API for a given employee ID
-Returns information about his/her TODO list progress (In JSON format)
-"""
-
+"""Exports to-do list information for a given employee ID to JSON format."""
 import json
 import requests
 import sys
